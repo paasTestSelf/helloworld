@@ -1,0 +1,23 @@
+--- # webserver
+server:
+  port: 8080
+  context-path: /
+
+--- # logging
+logging:
+  level:
+#    org.springframework.web.servlet.mvc: debug
+#    org.mybatis: debug
+
+--- # template
+spring:
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+    encoding: UTF-8
+--- # file upload
+  spring:
+    http:
+      multipart:
+        max-request-size: 1024Mb
+        max-file-size: 1024Mb
