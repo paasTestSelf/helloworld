@@ -1,4 +1,3 @@
-FROM registry.paas:443/admin/tomcat:new
-ENV ADAPTER_CONFIG_PLACE BJPAAS
-RUN rm -rf /tomcat/webapps/*
-ADD ROOT.war /tomcat/webapps/
+FROM registry.docker:5000/admin/tomcat:2018
+RUN rm -rf /usr/local/tomcat/webapps/*
+ADD ROOT.war /usr/local/tomcat/webapps/
